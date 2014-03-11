@@ -36,7 +36,7 @@ class Controller_Comments extends Controller_Template
 			$comment = Model_Comment::forge(array(
 				'name' => Auth::instance()->get_screen_name(),
 				'comment' => Input::post('comment'),
-				'id' => $id,
+				'message_id' => Input::post('message_id'),
 			));
 			
 			if ($comment and $comment->save())
@@ -60,6 +60,8 @@ class Controller_Comments extends Controller_Template
 		$views['form'] = View::forge('comments/_form');
 	 
 		$this->template->content = View::forge('comments/create', $views);
+
+		$this->template->content->set_global('id', $id);
 	}
 
 	public function action_delete($id, $message_id)

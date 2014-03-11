@@ -8,6 +8,7 @@
 	<?php echo Form::textarea('comment', Input::post('comment', isset($comment) ? $comment->comment : ''), array('cols' => 60, 'rows' => 8)); ?>
 </p>
 <div class="actions">
+	<input type="hidden" name="message_id" value="<?=$id?>">
 	<?php echo Form::submit(); ?>
 </div>
 <?php echo Form::close(); ?>
