@@ -26,7 +26,7 @@ echo Html::anchor('messages', 'Back');
 	<li>
 	<ul>
 		<li><strong>Name:</strong> <?php echo $comment->name; ?></li>
-		<li><strong>Comment:</strong><br /><?php echo $comment->comment; ?></li>
+		<li><strong> --> </strong><?php echo $comment->comment; ?></li>
 		<?php if ($comment->name == Auth::instance()->get_screen_name()) : ?>
 			<li><p><?php echo Html::anchor('comments/edit/'.$comment->id.'/'.$message->id, 'Edit'); ?>|
 			<?php echo Html::anchor('comments/delete/'.$comment->id.'/'.$message->id, 'Delete', array('onclick' => "return confirm('Are you sure?')")); ?></li>

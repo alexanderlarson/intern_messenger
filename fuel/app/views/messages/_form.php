@@ -12,7 +12,7 @@
 			<?php echo Form::label('Message', 'message'); ?>
 
 			<div class="input">
-				<?php echo Form::textarea('message', Input::post('message', isset($message) ? $message->message : ''), array('class' => 'span8', 'rows' => 8)); ?>
+				<?php echo Form::textarea('message', Input::post('message', isset($message) ? $message->message : ''), array('class' => 'span8', 'cols' => 60, 'rows' => 5)); ?>
 
 			</div>
 		</div>

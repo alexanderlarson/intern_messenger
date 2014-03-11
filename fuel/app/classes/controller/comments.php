@@ -27,6 +27,7 @@ class Controller_Comments extends Controller_Template
 		}
 		$this->template->title = 'Comments &raquo; Edit';
 		$this->template->content = View::forge('comments/edit');
+		$this->template->content->set_global('id', $id);
 	}
 
 	public function action_create($id = null)
